@@ -19,7 +19,7 @@ public class App {
 
             if (bmi > 30) {
                 status = "High Risk";       
-            } else if (glucose > 140) {
+            } else if (glucose > 150) {
                 status = "High Risk";       
             } else 
                 status = "Normal";          
@@ -29,4 +29,5 @@ public class App {
         }
     }
 }
+
 
