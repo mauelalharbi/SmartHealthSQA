@@ -1,0 +1,32 @@
+package smarthealthsqa;
+
+public class App {
+    public static void main(String[] args) {
+        
+        double[][] cases = {
+            {60.0, 1.70, 100},  
+            {95.0, 1.70, 110},  
+            {70.0, 1.75, 150}   
+        };
+
+        for (int i = 0; i < cases.length; i++) {
+            double weight = cases[i][0];
+            double height = cases[i][1];
+            int glucose = (int) cases[i][2];
+
+            double bmi = weight / (height * height);
+            String status;
+
+            if (bmi > 30) {
+                status = "High Risk";       
+            } else if (glucose > 140) {
+                status = "High Risk";       
+            } else 
+                status = "Normal";          
+            }
+
+            System.out.printf("Case %d: BMI=%.2f, Status=%s%n", i + 1, bmi, status);
+        }
+    }
+}
+
